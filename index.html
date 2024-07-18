@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE = edge">
+<meta name="viewport" content="width=device-width">
+<title>되누</title>
+
+</head>
+<body>
+    <h1 id="sound"></h1>
+    <input id="name" type="text">
+<button onclick="Getsound()"> API 요청 </button>
+
+<script>
+
+async function Getsound() {
+
+  const name = document.getElementById('name').value
+  const response = await fetch(`http://localhost:3000/sound/${name}`);
+  const jsonData = await response.json();
+  {
+    console.log(jsonData);
+    document.getElementById('name').innerHTML = data
+  }
+}
+
+</script>
+</body>
+</html>
